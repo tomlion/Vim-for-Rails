@@ -1,4 +1,4 @@
-" -----------------------------------------------------------------------------  
+"---------------------------------------------------------------------------  
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
@@ -25,7 +25,6 @@
 " |                                                                           |
 " | Put machine/user specific settings in ~/.vimrc.local                      |
 " -----------------------------------------------------------------------------  
-
 
 set nocompatible
 let mapleader = ","
@@ -96,14 +95,14 @@ set smartcase " Ignore case when searching lowercase
 "set t_Co=256 " 256 colors
 set background=dark 
 syntax on " syntax highlighting
-colorscheme ir_black
+colorscheme solarized
 
 
 " Status Line *****************************************************************
 set showcmd
 set ruler " Show ruler
 "set ch=2 " Make command line two lines high
-match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
+"match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
 
 " filename completition *******************************************************
 " works as bash completition
@@ -135,8 +134,8 @@ filetype plugin indent on
 
 
 " Insert New Line *************************************************************
-map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
-map <Enter> o<ESC>
+"map <S-Enter> O<ESC> " awesome, inserts new line without going into insert mode
+"map <Enter> o<ESC>
 "set fo-=r " do not insert a comment leader after an enter, (no work, fix!!)
 
 
@@ -314,7 +313,7 @@ au BufRead,BufNewFile nginx.conf* set ft=nginx
 syntax on
 
 if has("gui_macvim")
-  colorscheme ir_black
+  colorscheme solarized
 elseif has("gui_gtk2")
   colorscheme ir_black
 elseif has("x11")
@@ -347,3 +346,35 @@ endif
 "match LongLineWarning '\%120v.*'
 
 "autocmd User ~/git/some_folder/* call Tabstyle_spaces() | let g:force_xhtml=1
+
+
+
+" ----------------------------------
+" |             MINE               |
+" ----------------------------------
+"moving between splits
+map ;h <c-w>h
+map ;l <c-w>l
+map ;j <c-w>j
+map ;k <c-w>k
+map ;[ <c-w>-
+map ;] <c-w>+
+map ;r <c-w>r
+map ;K <c-w>K
+map ;J <c-w>J
+map ;H <c-w>H
+map ;L <c-w>L
+map ;{ <c-w>_
+map ;} <c-w>|
+map ;= <c-w>=
+map ;c <c-w>c
+
+"splits
+map ;t :vert split<CR>
+map ;s :split<CR>
+
+"quickfix list
+"nmap <leader>f :cw<CR>
+"nmap <leader>n :cn<CR>
+"nmap <leader>p :cp<CR>
+"  

@@ -22,9 +22,6 @@
 [submodule "bundle/SearchComplete"]
 	path = bundle/SearchComplete
 	url = http://github.com/vim-scripts/SearchComplete.git
-[submodule "bundle/ShowMarks"]
-	path = bundle/ShowMarks
-	url = http://github.com/vim-scripts/ShowMarks.git
 [submodule "bundle/ReloadScript"]
 	path = bundle/ReloadScript
 	url = http://github.com/vim-scripts/ReloadScript.git
